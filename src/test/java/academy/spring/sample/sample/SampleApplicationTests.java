@@ -29,4 +29,17 @@ class SampleApplicationTests {
 		assertEquals("Hello World!", response);
 	}
 
+	@Test
+	void testAnotherGetEndpoint() {
+		// Verify that the application returns "Hello World!" when the /hello endpoint is called
+		// setup
+
+		// exercise
+		String response = restTemplate.getForObject("/endpoint", String.class);
+
+		// verify
+		assertEquals("Another get endpoint", response);
+
+	}
+
 }
